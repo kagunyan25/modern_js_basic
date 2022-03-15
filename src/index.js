@@ -150,3 +150,33 @@
 // arr8[0] = 100;
 // console.log (arr6); // => [100, 20]
 // console.log (arr4); // => [100, 20]
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+const nameArr = ["田中", "山田", "中村"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+// const nameArr2 = nameArr.map((name)=>{
+//   return name;
+// })
+// console.log(nameArr2); // => ["田中", "山田", "中村"]
+
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num%2 === 1;
+// });
+// console.log(newNumArr); // => [1, 3, 5]
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "中村") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
